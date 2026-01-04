@@ -1,6 +1,6 @@
 # W3Dev Coding Agent - Claude Code Plugin Marketplace
 
-A curated Claude Code plugin marketplace providing essential development tools with MCP servers for documentation lookup and code search, plus LSP support for Go and TypeScript.
+A curated Claude Code plugin marketplace providing essential development tools with MCP servers for documentation lookup and code search, plus LSP support for multiple languages.
 
 ## Installation
 
@@ -18,6 +18,12 @@ A curated Claude Code plugin marketplace providing essential development tools w
 
 # Next.js development toolkit
 /plugin install nextjs-devtools-plugin@w3dev
+
+# Expo/React Native development toolkit
+/plugin install expo-devtools-plugin@w3dev
+
+# Flutter/Dart development toolkit
+/plugin install flutter-devtools-plugin@w3dev
 ```
 
 ## Included Plugins
@@ -46,16 +52,11 @@ Essential development tools for any project:
 | `/docs` | Look up library documentation using Context7 |
 | `/search-code` | Find real-world code examples from GitHub |
 
-#### Skills
-| Skill | Description |
-|-------|-------------|
-| `docs-lookup` | Intelligent documentation and example lookup |
-
 ---
 
 ### 2. nextjs-devtools-plugin
 
-Complete Next.js development toolkit with everything you need:
+Complete Next.js development toolkit:
 
 #### MCP Servers
 | Server | Description |
@@ -70,15 +71,6 @@ Complete Next.js development toolkit with everything you need:
 |----------|--------|------------|
 | **TypeScript/JavaScript** | `typescript-language-server` | `.ts`, `.tsx`, `.js`, `.jsx` |
 
-#### Capabilities
-- Real-time build, runtime, and TypeScript error detection
-- Live application state queries
-- Page routes and metadata inspection
-- Server Actions debugging
-- Automatic codemod upgrades
-- Documentation lookup via Context7
-- Code search via Grep
-
 #### Commands
 | Command | Description |
 |---------|-------------|
@@ -86,14 +78,88 @@ Complete Next.js development toolkit with everything you need:
 | `/nextjs-routes` | Inspect application routes |
 | `/nextjs-upgrade` | Upgrade Next.js version |
 
-#### Skills
-| Skill | Description |
-|-------|-------------|
-| `nextjs-debug` | Debug Next.js applications |
+#### Requirements
+- Node.js v20.19+
+- Next.js 16+ with dev server running
+
+---
+
+### 3. expo-devtools-plugin
+
+Expo/React Native development toolkit:
+
+#### MCP Servers
+| Server | Description |
+|--------|-------------|
+| **expo-mcp** | Official Expo MCP for documentation and automation |
+| **deepwiki** | Ask questions about any GitHub repository |
+| **context7** | Query up-to-date documentation for any library |
+| **grep** | Search real-world code examples from public GitHub repos |
+
+#### LSP Support
+| Language | Server | Extensions |
+|----------|--------|------------|
+| **TypeScript/JavaScript** | `typescript-language-server` | `.ts`, `.tsx`, `.js`, `.jsx` |
+
+#### Commands
+| Command | Description |
+|---------|-------------|
+| `/expo-docs` | Look up Expo documentation |
+| `/expo-install` | Install Expo packages with `npx expo install` |
+| `/expo-screenshot` | Take screenshot of running app |
 
 #### Requirements
-- Node.js v20.19 or newer
-- Next.js 16+ with dev server running
+- EAS paid plan (for full Expo MCP features)
+- Expo SDK 54+
+- Node.js 18+
+
+---
+
+### 4. flutter-devtools-plugin
+
+Flutter/Dart development toolkit:
+
+#### MCP Servers
+| Server | Description |
+|--------|-------------|
+| **dart** | Official Dart MCP for code analysis and package management |
+| **deepwiki** | Ask questions about any GitHub repository |
+| **context7** | Query up-to-date documentation for any library |
+| **grep** | Search real-world code examples from public GitHub repos |
+
+#### LSP Support
+| Language | Server | Extensions |
+|----------|--------|------------|
+| **Dart** | `dart language-server` | `.dart` |
+
+#### Commands
+| Command | Description |
+|---------|-------------|
+| `/flutter-analyze` | Analyze Flutter/Dart code for issues |
+| `/flutter-test` | Run Flutter tests |
+| `/flutter-pub` | Search pub.dev and manage dependencies |
+
+#### Requirements
+- Dart SDK 3.9+
+- Flutter SDK (latest stable)
+
+---
+
+## Marketplace-Level Skills
+
+These skills are available at the marketplace level to help with plugin development:
+
+| Skill | Description |
+|-------|-------------|
+| `plugin-builder` | Comprehensive guide for creating Claude Code plugins and marketplaces |
+
+The `plugin-builder` skill teaches you how to:
+- Structure plugins and marketplaces
+- Configure MCP and LSP servers
+- Create commands and skills
+- Follow best practices and naming conventions
+
+---
 
 ## Project Structure
 
@@ -103,76 +169,72 @@ w3dev-agent/
 │   └── marketplace.json        # Marketplace registry
 ├── plugins/
 │   ├── basic-development/      # Basic development plugin
-│   │   ├── .claude-plugin/
-│   │   │   └── plugin.json
-│   │   ├── commands/
-│   │   ├── skills/
-│   │   ├── .mcp.json
-│   │   ├── .lsp.json
-│   │   └── README.md
-│   └── nextjs-devtools/        # Next.js devtools plugin
-│       ├── .claude-plugin/
-│       │   └── plugin.json
-│       ├── commands/
-│       ├── skills/
-│       ├── .mcp.json
-│       ├── .lsp.json
-│       └── README.md
+│   ├── nextjs-devtools/        # Next.js devtools plugin
+│   ├── expo-devtools/          # Expo/React Native plugin
+│   └── flutter-devtools/       # Flutter/Dart plugin
+├── skills/
+│   └── plugin-builder/         # Plugin development guide
+│       └── SKILL.md
 └── README.md
 ```
 
-## Requirements
+## Requirements by Plugin
 
-### For basic-development-plugin
+| Plugin | Runtime | LSP |
+|--------|---------|-----|
+| basic-development | Node.js | TypeScript, Go |
+| nextjs-devtools | Node.js 20.19+ | TypeScript |
+| expo-devtools | Node.js 18+, EAS paid plan | TypeScript |
+| flutter-devtools | Dart 3.9+ | Dart |
 
-**TypeScript/JavaScript LSP:**
+### LSP Installation
+
+**TypeScript/JavaScript:**
 ```bash
 npm install -g typescript-language-server typescript
 ```
 
-**Go LSP:**
+**Go:**
 ```bash
 go install golang.org/x/tools/gopls@latest
 ```
 
-### For nextjs-devtools-plugin
-
-**TypeScript LSP:**
-```bash
-npm install -g typescript-language-server typescript
-```
-
-**Next.js Requirements:**
-- Node.js v20.19 or newer
-- Next.js 16+ with dev server running
+**Dart:** (included with Dart SDK 3.9+)
 
 ## Usage Examples
 
-### Look up documentation
+### Basic Development
 ```
 /docs react useState hook
-/docs next.js server components
-```
-
-### Search for code patterns
-```
 /search-code "useEffect(" --lang=TypeScript
-/search-code "http.HandleFunc" --lang=Go
 ```
 
-### Debug Next.js application
+### Next.js Development
 ```
-/nextjs-errors          # Check for build/runtime errors
-/nextjs-routes          # List all routes
-/nextjs-upgrade         # Upgrade to latest Next.js
+/nextjs-errors
+/nextjs-routes
+```
+
+### Expo/React Native Development
+```
+/expo-docs navigation
+/expo-install expo-camera
+```
+
+### Flutter/Dart Development
+```
+/flutter-analyze
+/flutter-pub search state management
+/flutter-test
 ```
 
 ## Contributing
 
 1. Fork the repository
-2. Add your plugin to the `plugins/` directory
-3. Update `.claude-plugin/marketplace.json` to include your plugin
-4. Submit a pull request
+2. Read the `plugin-builder` skill in `skills/plugin-builder/SKILL.md` for comprehensive guidance
+3. Add your plugin to the `plugins/` directory following the documented structure
+4. Update `.claude-plugin/marketplace.json` to include your plugin
+5. Submit a pull request
 
 ## License
 

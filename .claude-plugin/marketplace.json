@@ -8,7 +8,7 @@
         "description": "A curated collection of development plugins for Claude Code with MCP servers and LSP support",
         "version": "1.0.0",
         "homepage": "https://github.com/w3dev/coding-agent",
-        "keywords": ["development", "mcp", "lsp", "typescript", "go", "nextjs", "documentation", "code-search"]
+        "keywords": ["development", "mcp", "lsp", "typescript", "go", "nextjs", "expo", "react-native", "flutter", "dart", "documentation", "code-search"]
     },
     "plugins": [
         {
@@ -20,6 +20,16 @@
             "name": "nextjs-devtools-plugin",
             "source": "./plugins/nextjs-devtools",
             "description": "Complete Next.js development toolkit with devtools MCP, documentation lookup, code search, and TypeScript LSP"
+        },
+        {
+            "name": "expo-devtools-plugin",
+            "source": "./plugins/expo-devtools",
+            "description": "Expo/React Native development toolkit with Expo MCP, documentation lookup, and TypeScript LSP"
+        },
+        {
+            "name": "flutter-devtools-plugin",
+            "source": "./plugins/flutter-devtools",
+            "description": "Flutter/Dart development toolkit with Dart MCP, code analysis, testing, and Dart LSP"
         }
     ]
 }
