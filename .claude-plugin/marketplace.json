@@ -8,7 +8,7 @@
         "description": "A curated collection of development plugins for Claude Code with MCP servers and LSP support",
         "version": "1.0.0",
         "homepage": "https://github.com/w3dev/coding-agent",
-        "keywords": ["development", "mcp", "lsp", "typescript", "go", "nextjs", "expo", "react-native", "flutter", "dart", "documentation", "code-search"]
+        "keywords": ["development", "mcp", "lsp", "typescript", "go", "nextjs", "expo", "react-native", "flutter", "dart", "cloudflare", "workers", "edge", "serverless", "documentation", "code-search"]
     },
     "plugins": [
         {
@@ -30,6 +30,11 @@
             "name": "flutter-devtools-plugin",
             "source": "./plugins/flutter-devtools",
             "description": "Flutter/Dart development toolkit with Dart MCP, code analysis, testing, and Dart LSP"
+        },
+        {
+            "name": "cloudflare-workers-plugin",
+            "source": "./plugins/cloudflare-workers",
+            "description": "Cloudflare Workers development toolkit with managed MCP servers for deployment, debugging, and storage management"
         }
     ]
 }

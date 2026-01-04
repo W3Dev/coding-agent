@@ -1,0 +1,18 @@
+{
+    "servers": {
+        "typescript": {
+            "command": ["typescript-language-server", "--stdio"],
+            "filetypes": ["typescript", "javascript"],
+            "extensions": [".ts", ".js", ".mts", ".mjs"],
+            "rootPatterns": ["wrangler.toml", "wrangler.json", "tsconfig.json", "package.json"],
+            "initializationOptions": {
+                "preferences": {
+                    "includeInlayParameterNameHints": "all",
+                    "includeInlayPropertyDeclarationTypeHints": true,
+                    "includeInlayFunctionLikeReturnTypeHints": true,
+                    "includeInlayVariableTypeHints": true
+                }
+            }
+        }
+    }
+}

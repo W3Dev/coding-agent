@@ -1,0 +1,21 @@
+{
+    "name": "cloudflare-workers-plugin",
+    "description": "Cloudflare Workers development toolkit with managed MCP servers for deployment, debugging, and KV/R2/D1 management",
+    "version": "1.0.0",
+    "author": {
+        "name": "Ashutosh Kumar",
+        "email": "ashutoshpw@users.noreply.github.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/w3dev/coding-agent",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/w3dev/coding-agent.git"
+    },
+    "keywords": ["cloudflare", "workers", "edge", "serverless", "kv", "r2", "d1", "mcp", "typescript", "wrangler"],
+    "mcpServers": "${CLAUDE_PLUGIN_ROOT}/.mcp.json",
+    "lspServers": "${CLAUDE_PLUGIN_ROOT}/.lsp.json",
+    "requires": {
+        "node": ">=18.0.0"
+    }
+}

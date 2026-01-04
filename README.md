@@ -24,6 +24,9 @@ A curated Claude Code plugin marketplace providing essential development tools w
 
 # Flutter/Dart development toolkit
 /plugin install flutter-devtools-plugin@w3dev
+
+# Cloudflare Workers development toolkit
+/plugin install cloudflare-workers-plugin@w3dev
 ```
 
 ## Included Plugins
@@ -145,6 +148,47 @@ Flutter/Dart development toolkit:
 
 ---
 
+### 5. cloudflare-workers-plugin
+
+Cloudflare Workers development toolkit:
+
+#### MCP Servers
+| Server | Description |
+|--------|-------------|
+| **cf-docs** | Cloudflare platform documentation |
+| **cf-bindings** | Workers bindings (KV, R2, D1, AI, etc.) |
+| **cf-builds** | Workers deployment and build management |
+| **cf-observability** | Logs, analytics, and performance monitoring |
+| **deepwiki** | Ask questions about any GitHub repository |
+| **context7** | Query up-to-date documentation for any library |
+| **grep** | Search real-world code examples from public GitHub repos |
+
+#### LSP Support
+| Language | Server | Extensions |
+|----------|--------|------------|
+| **TypeScript/JavaScript** | `typescript-language-server` | `.ts`, `.js`, `.mts`, `.mjs` |
+
+#### Commands
+| Command | Description |
+|---------|-------------|
+| `/cf-docs` | Look up Cloudflare Workers documentation |
+| `/cf-deploy` | Deploy Worker to Cloudflare |
+| `/cf-logs` | View Worker logs and analytics |
+| `/cf-kv` | Manage KV namespace operations |
+
+#### Capabilities
+- Access Cloudflare Workers documentation
+- Deploy Workers to edge network
+- View real-time logs and analytics
+- Manage KV/R2/D1 storage
+- Use Workers AI models
+
+#### Requirements
+- Cloudflare account with API token
+- Node.js 18+
+
+---
+
 ## Marketplace-Level Skills
 
 These skills are available at the marketplace level to help with plugin development:
@@ -171,7 +215,8 @@ w3dev-agent/
 │   ├── basic-development/      # Basic development plugin
 │   ├── nextjs-devtools/        # Next.js devtools plugin
 │   ├── expo-devtools/          # Expo/React Native plugin
-│   └── flutter-devtools/       # Flutter/Dart plugin
+│   ├── flutter-devtools/       # Flutter/Dart plugin
+│   └── cloudflare-workers/     # Cloudflare Workers plugin
 ├── skills/
 │   └── plugin-builder/         # Plugin development guide
 │       └── SKILL.md
@@ -186,6 +231,7 @@ w3dev-agent/
 | nextjs-devtools | Node.js 20.19+ | TypeScript |
 | expo-devtools | Node.js 18+, EAS paid plan | TypeScript |
 | flutter-devtools | Dart 3.9+ | Dart |
+| cloudflare-workers | Node.js 18+ | TypeScript |
 
 ### LSP Installation
 
@@ -226,6 +272,14 @@ go install golang.org/x/tools/gopls@latest
 /flutter-analyze
 /flutter-pub search state management
 /flutter-test
+```
+
+### Cloudflare Workers Development
+```
+/cf-docs workers
+/cf-deploy
+/cf-logs my-worker --tail
+/cf-kv get MY_NAMESPACE my-key
 ```
 
 ## Contributing
