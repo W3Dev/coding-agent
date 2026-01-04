@@ -1,0 +1,18 @@
+{
+    "servers": {
+        "typescript": {
+            "command": ["typescript-language-server", "--stdio"],
+            "filetypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"],
+            "extensions": [".ts", ".tsx", ".js", ".jsx"],
+            "rootPatterns": ["tsconfig.json", "jsconfig.json", "package.json", "app.json", "app.config.js", "app.config.ts"],
+            "initializationOptions": {
+                "preferences": {
+                    "includeInlayParameterNameHints": "all",
+                    "includeInlayPropertyDeclarationTypeHints": true,
+                    "includeInlayFunctionLikeReturnTypeHints": true,
+                    "includeInlayVariableTypeHints": true
+                }
+            }
+        }
+    }
+}

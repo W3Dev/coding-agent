@@ -1,0 +1,21 @@
+{
+    "name": "flutter-devtools-plugin",
+    "description": "Complete Flutter/Dart development toolkit with Dart MCP, code analysis, testing, dependency management, and Dart LSP support",
+    "version": "1.0.0",
+    "author": {
+        "name": "Ashutosh Kumar",
+        "email": "ashutoshpw@users.noreply.github.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/w3dev/coding-agent",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/w3dev/coding-agent.git"
+    },
+    "keywords": ["flutter", "dart", "mobile", "mcp", "lsp", "ios", "android", "pub.dev", "cross-platform"],
+    "mcpServers": "${CLAUDE_PLUGIN_ROOT}/.mcp.json",
+    "lspServers": "${CLAUDE_PLUGIN_ROOT}/.lsp.json",
+    "requires": {
+        "dart": ">=3.9.0"
+    }
+}

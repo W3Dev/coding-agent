@@ -1,0 +1,21 @@
+{
+    "name": "expo-devtools-plugin",
+    "description": "Complete Expo/React Native development toolkit with Expo MCP, documentation lookup, code search, and TypeScript LSP support",
+    "version": "1.0.0",
+    "author": {
+        "name": "Ashutosh Kumar",
+        "email": "ashutoshpw@users.noreply.github.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/w3dev/coding-agent",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/w3dev/coding-agent.git"
+    },
+    "keywords": ["expo", "react-native", "mobile", "mcp", "typescript", "lsp", "ios", "android", "eas"],
+    "mcpServers": "${CLAUDE_PLUGIN_ROOT}/.mcp.json",
+    "lspServers": "${CLAUDE_PLUGIN_ROOT}/.lsp.json",
+    "requires": {
+        "node": ">=18.0.0"
+    }
+}

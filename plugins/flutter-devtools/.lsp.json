@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "dart": {
+            "command": ["dart", "language-server", "--protocol=lsp"],
+            "filetypes": ["dart"],
+            "extensions": [".dart"],
+            "rootPatterns": ["pubspec.yaml", "analysis_options.yaml"],
+            "initializationOptions": {}
+        }
+    }
+}

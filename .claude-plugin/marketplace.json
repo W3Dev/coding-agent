@@ -13,12 +13,12 @@
     "plugins": [
         {
             "name": "basic-development-plugin",
-            "path": "./plugins/basic-development",
+            "source": "./plugins/basic-development",
             "description": "Essential development tools with MCP servers for docs lookup and LSP support for Go/TypeScript"
         },
         {
             "name": "nextjs-devtools-plugin",
-            "path": "./plugins/nextjs-devtools",
+            "source": "./plugins/nextjs-devtools",
             "description": "Complete Next.js development toolkit with devtools MCP, documentation lookup, code search, and TypeScript LSP"
         }
     ]
