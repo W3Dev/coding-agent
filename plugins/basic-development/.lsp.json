@@ -1,0 +1,33 @@
+{
+    "servers": {
+        "typescript": {
+            "command": ["typescript-language-server", "--stdio"],
+            "filetypes": ["typescript", "typescriptreact", "javascript", "javascriptreact"],
+            "extensions": [".ts", ".tsx", ".js", ".jsx"],
+            "rootPatterns": ["tsconfig.json", "jsconfig.json", "package.json"],
+            "initializationOptions": {
+                "preferences": {
+                    "includeInlayParameterNameHints": "all",
+                    "includeInlayPropertyDeclarationTypeHints": true,
+                    "includeInlayFunctionLikeReturnTypeHints": true,
+                    "includeInlayVariableTypeHints": true
+                }
+            }
+        },
+        "go": {
+            "command": ["gopls", "serve"],
+            "filetypes": ["go", "gomod", "gowork", "gotmpl"],
+            "extensions": [".go", ".mod", ".work", ".tmpl"],
+            "rootPatterns": ["go.mod", "go.work"],
+            "initializationOptions": {
+                "usePlaceholders": true,
+                "staticcheck": true,
+                "gofumpt": true,
+                "analyses": {
+                    "unusedparams": true,
+                    "shadow": true
+                }
+            }
+        }
+    }
+}

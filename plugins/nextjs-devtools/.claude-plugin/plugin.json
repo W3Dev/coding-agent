@@ -1,0 +1,21 @@
+{
+    "name": "nextjs-devtools-plugin",
+    "description": "Complete Next.js development toolkit with devtools MCP, documentation lookup, code search, and TypeScript LSP support",
+    "version": "1.0.0",
+    "author": {
+        "name": "Ashutosh Kumar",
+        "email": "ashutoshpw@users.noreply.github.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/w3dev/coding-agent",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/w3dev/coding-agent.git"
+    },
+    "keywords": ["nextjs", "next.js", "vercel", "react", "mcp", "devtools", "debugging", "ssr", "server-components", "typescript", "lsp"],
+    "mcpServers": "${CLAUDE_PLUGIN_ROOT}/.mcp.json",
+    "lspServers": "${CLAUDE_PLUGIN_ROOT}/.lsp.json",
+    "requires": {
+        "node": ">=20.19.0"
+    }
+}
